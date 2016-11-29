@@ -25,11 +25,20 @@ def Quiz_3_5_3():
     L = [[2,2], [3,2], [1.75,1], [2,1], [2.25,1], [2.5,1], [2.75, 1], [3,1], [3.25, 1]]
     plot([scalar_vector_multi(2,v) for v in L],10);
 
+def Excercise3_6_1():
+    w = [5-2,7-3]
+    x = [2,3]
+
+    u = [2,3]
+    v = [5,7]
+    plot([add2(scalar_vector_multi(i/100.,w),x) for i in range(101)], 10)
+    plot([u,v],10)
 
 # Task_3_3_3();
 # Task_3_4_3();
 # Prob3_4_4();
-Quiz_3_5_3();
+# Quiz_3_5_3();
+Excercise3_6_1();
 
 ## A dummy code to wait for end command.
 while(True):
