@@ -34,12 +34,41 @@ def Excercise3_6_1():
     plot([add2(scalar_vector_multi(i/100.,w),x) for i in range(101)], 10)
     plot([u,v],10)
 
+
+def segment(pt1, pt2):
+    return [add2(scalar_vector_multi(i/100,pt1),scalar_vector_multi((1-(i/100)),pt2)) for i in range(101)]
+
+def Task_3_6_9():
+    plot([[3.5,3],[0.5,1]],10)
+    plot(segment([3.5,3],[0.5,1]),10)
+
+
+class Vec:
+    def __init__ (self,labels):
+        self.D = labels;
+        self.f = {}
+        self.zero_init();
+
+    def zero_init(self):
+        for d in self.D:
+            self.f[d] = 0
+
+def zero_vec(D):
+    return (Vec(D));
+
+def Quiz_3_7_1():
+    vec = zero_vec(['A','B','C']);
+    print (vec.f)
+
+
 # Task_3_3_3();
 # Task_3_4_3();
 # Prob3_4_4();
 # Quiz_3_5_3();
-Excercise3_6_1();
+# Excercise3_6_1();
+# Task_3_6_9()
+Quiz_3_7_1()
 
 ## A dummy code to wait for end command.
-while(True):
-	A = 1;
+#while(True):
+#	A = 1;
