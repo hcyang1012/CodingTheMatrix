@@ -86,6 +86,22 @@ def Quiz_3_7_3():
     setitem(vec,'A',1)
     print(scalar_mul(vec,2).f)
 
+
+def add(u,v):
+    return Vec(u.D, {d:getitem(u,d) + getitem(v,d) for d in u.D})
+
+def Quiz_3_7_4():
+    v = Vec({'A','B','C'},{'A':1}) 
+    u = Vec(v.D,{'A':5,'C':10})
+    print(add(u,v).f)
+
+def neg(v):
+    return scalar_mul(v,-1)
+
+def Quiz_3_7_5():
+    v = Vec({'A','B','C'},{'A':1, 'B':0, 'C':2}) 
+    print(neg(v).f)
+
 # Task_3_3_3();
 # Task_3_4_3();
 # Prob3_4_4();
@@ -94,7 +110,10 @@ def Quiz_3_7_3():
 # Task_3_6_9()
 # Quiz_3_7_1()
 # Quiz_3_7_2()
-Quiz_3_7_3()
+# Quiz_3_7_3()
+# Quiz_3_7_4()
+Quiz_3_7_5()
+
 ## A dummy code to wait for end command.
 #while(True):
 #	A = 1;
