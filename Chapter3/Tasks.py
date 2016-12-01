@@ -44,22 +44,47 @@ def Task_3_6_9():
 
 
 class Vec:
-    def __init__ (self,labels):
+    def __init__ (self,labels,function):
         self.D = labels;
-        self.f = {}
-        self.zero_init();
+        self.f = function;
+
+    #def __init__ (self,labels):
+    #    self.D = labels;
+    #    self.f = {}
+    #    self.zero_init();
 
     def zero_init(self):
         for d in self.D:
             self.f[d] = 0
 
 def zero_vec(D):
-    return (Vec(D));
+    return (Vec(D,{}));
 
 def Quiz_3_7_1():
     vec = zero_vec(['A','B','C']);
     print (vec.f)
 
+def setitem(v, d, val):
+    v.f[d] = val;
+
+def getitem(v,d):
+    if d in v.f:
+        return v.f[d]
+    else:
+        return 0
+
+def Quiz_3_7_2():
+    vec = zero_vec(['A','B','C']);
+    setitem(vec,'A',1)
+    print(getitem(vec,'A'))
+
+def scalar_mul(v,alpha):
+    return Vec(v.D, {d:alpha*value for d,value in v.f.items()})
+
+def Quiz_3_7_3():
+    vec = zero_vec(['A','B','C']);
+    setitem(vec,'A',1)
+    print(scalar_mul(vec,2).f)
 
 # Task_3_3_3();
 # Task_3_4_3();
@@ -67,8 +92,9 @@ def Quiz_3_7_1():
 # Quiz_3_5_3();
 # Excercise3_6_1();
 # Task_3_6_9()
-Quiz_3_7_1()
-
+# Quiz_3_7_1()
+# Quiz_3_7_2()
+Quiz_3_7_3()
 ## A dummy code to wait for end command.
 #while(True):
 #	A = 1;
