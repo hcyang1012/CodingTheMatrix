@@ -102,6 +102,14 @@ def Quiz_3_7_5():
     v = Vec({'A','B','C'},{'A':1, 'B':0, 'C':2}) 
     print(neg(v).f)
 
+def list_dot(u,v):
+    return sum([a*b for (a,b) in zip(u,v)])
+
+def Quiz_3_9_4():
+    u = [1,1,1,1,1]
+    v = [10,20,0,40,-100]
+    print(list_dot(u,v))
+
 # Task_3_3_3();
 # Task_3_4_3();
 # Prob3_4_4();
@@ -112,7 +120,8 @@ def Quiz_3_7_5():
 # Quiz_3_7_2()
 # Quiz_3_7_3()
 # Quiz_3_7_4()
-Quiz_3_7_5()
+# Quiz_3_7_5()
+Quiz_3_9_4()
 
 ## A dummy code to wait for end command.
 #while(True):
