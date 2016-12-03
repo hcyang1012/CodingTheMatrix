@@ -1,5 +1,6 @@
 from vec import Vec
 
+print("Setter and Getter Test")
 newVec = Vec({'A','B','C'},{'A':1.0})
 print(newVec['A'])
 print(newVec['B'])
@@ -11,7 +12,7 @@ print(newVec['C'])
 
 
 
-
+print("Equal operation test")
 print(Vec({'a', 'b', 'c'}, {'a':0}) == Vec({'a', 'b', 'c'}, {'b':0})) #T
 print(Vec({'a', 'b', 'c'}, {'a': 0}) == Vec({'a', 'b', 'c'}, {})) #T
 print(Vec({'a', 'b', 'c'}, {}) == Vec({'a', 'b', 'c'}, {'a': 0})) #T
@@ -21,3 +22,9 @@ print(Vec({'a','b','c'}, {'a':0,'c':1,'b':4}) == Vec({'a','b','c'}, {'a':0,'c':1
 print(Vec({'a','b'},{'a':1}) == Vec({'a','b'},{'b':1})) #F
 print(Vec({'a','b'},{'a':1}) == Vec({'a','b'},{'a':2})) #F
 
+
+print("Add operation test")
+a = Vec({'a','e','i','o','u'}, {'a':0,'e':1,'i':2})
+b = Vec({'a','e','i','o','u'}, {'o':4,'u':7})
+c = Vec({'a','e','i','o','u'}, {'a':0,'e':1,'i':2,'o':4,'u':7})
+print(a + b == c)

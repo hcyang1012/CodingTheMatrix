@@ -112,7 +112,11 @@ def add(u,v):
     True
     """
     assert u.D == v.D
-    pass
+    newVec = u.copy()
+    for key in v.D:
+        newVec[key] = newVec[key] + v[key]
+    return newVec
+
 
 def dot(u,v):
     """
