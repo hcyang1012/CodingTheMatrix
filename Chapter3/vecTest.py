@@ -48,3 +48,13 @@ print(w1*w2) #72
 v1 = Vec({1, 2}, {1 : 3, 2 : 6})
 v2 = Vec({1, 2}, {1 : 2, 2 : 1})
 print(v1 * v2) #12
+
+
+
+print("Scalar mul operation test")
+zero = Vec({'x','y','z','w'}, {})
+u = Vec({'x','y','z','w'},{'x':1,'y':2,'z':3,'w':4})
+print(0*u == zero) #True
+print(1*u == u) #True
+print(0.5*u == Vec({'x','y','z','w'},{'x':0.5,'y':1,'z':1.5,'w':2})) #True
+print(u == Vec({'x','y','z','w'},{'x':1,'y':2,'z':3,'w':4})) #True
