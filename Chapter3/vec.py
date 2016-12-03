@@ -12,7 +12,7 @@ def getitem(v,k):
     0
     """
     assert k in v.D
-    pass
+    return v.f[k]
 
 def setitem(v,k,val):
     """
@@ -32,7 +32,8 @@ def setitem(v,k,val):
     0
     """
     assert k in v.D
-    pass
+    v.f[k]  = val
+    return val
 
 def equal(u,v):
     """
