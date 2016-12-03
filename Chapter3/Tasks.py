@@ -110,6 +110,18 @@ def Quiz_3_9_4():
     v = [10,20,0,40,-100]
     print(list_dot(u,v))
 
+def get_similarity(segment,sample):
+    result = []
+    for i in range(len(segment) - len(sample)+1):
+        result.append(list_dot(sample,segment[i:i + len(sample)-1]))
+    return result;
+
+def Quiz_3_9_13():
+    segment1 = [1,-1,1,1,1,-1,1,1,1]
+    segment2 = [1,-1,1,1,-1,1]
+    print(get_similarity(segment1,segment2))
+    
+
 # Task_3_3_3();
 # Task_3_4_3();
 # Prob3_4_4();
@@ -121,7 +133,8 @@ def Quiz_3_9_4():
 # Quiz_3_7_3()
 # Quiz_3_7_4()
 # Quiz_3_7_5()
-Quiz_3_9_4()
+# Quiz_3_9_4()
+Quiz_3_9_13()
 
 ## A dummy code to wait for end command.
 #while(True):
