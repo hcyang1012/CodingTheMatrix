@@ -58,3 +58,9 @@ print(0*u == zero) #True
 print(1*u == u) #True
 print(0.5*u == Vec({'x','y','z','w'},{'x':0.5,'y':1,'z':1.5,'w':2})) #True
 print(u == Vec({'x','y','z','w'},{'x':1,'y':2,'z':3,'w':4})) #True
+
+print("Neg Test")
+u = Vec({1,3,5,7},{1:1,3:2,5:3,7:4})
+print(-u) # Vec({1, 3, 5, 7},{1: -1, 3: -2, 5: -3, 7: -4})
+print(u == Vec({1,3,5,7},{1:1,3:2,5:3,7:4})) #True
+print(-Vec({'a','b','c'}, {'a':1}) == Vec({'a','b','c'}, {'a':-1})) #True
