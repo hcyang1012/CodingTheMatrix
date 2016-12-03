@@ -150,7 +150,10 @@ def dot(u,v):
     12
     """
     assert u.D == v.D
-    pass
+    result = 0
+    for key in u.D:
+        result = result + u[key] * v[key]
+    return result
 
 def scalar_mul(v, alpha):
     """
