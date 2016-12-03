@@ -12,7 +12,10 @@ def getitem(v,k):
     0
     """
     assert k in v.D
-    return v.f[k]
+    if(k in v.f.keys()):
+        return v.f[k]
+    else:
+        return 0
 
 def setitem(v,k,val):
     """
@@ -68,8 +71,11 @@ def equal(u,v):
     >>> Vec({'a','b'},{'a':1}) == Vec({'a','b'},{'a':2})
     False
     """
-    assert u.D == v.D
-    pass
+    if(u.D != v.D): return False;
+
+    for key in u.D:
+        if(u[key] != v[key]): return False; 
+    return True;
 
 def add(u,v):
     """
